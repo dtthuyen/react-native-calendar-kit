@@ -20,7 +20,7 @@ const SingleDayBar = ({
     const dateStr = dateByIndex.format('YYYY-MM-DD');
     const [dayNameText, dayNum] = dateByIndex
       .locale(locale)
-      .format('dddd,DD')
+      .format('dddd,DD/MM/YYYY')
       .split(',');
     const highlightDate = highlightDates?.[dateStr];
 
@@ -49,7 +49,7 @@ const SingleDayBar = ({
             allowFontScaling={theme.allowFontScaling}
             style={[styles.dayNumber, dayNumber]}
           >
-            {dateByIndex.format('DD/MM/YYYY')}
+            {dayNum}
           </Text>
         </TouchableOpacity>
       </View>

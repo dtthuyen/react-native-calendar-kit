@@ -2,14 +2,12 @@ import { AnimatedFlashList, ListRenderItemInfo } from '@shopify/flash-list';
 import React, { useMemo, useRef, useState, useCallback } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { runOnJS, useAnimatedReaction } from 'react-native-reanimated';
-import { DEFAULT_PROPS } from '../../../constants';
+import { DEFAULT_PROPS, COLUMNS } from '../../../constants';
 import { useTimelineCalendarContext } from '../../../context/TimelineProvider';
 import type { DayBarItemProps, HighlightDates } from '../../../types';
 import MultipleDayBar from './MultipleDayBar';
 import ProgressBar from './ProgressBar';
 import SingleDayBar from './SingleDayBar';
-import {styled} from "meeting/src/global";
-import {COLUMNS} from "@howljs/calendar-kit/src/constants";
 import moment from "moment-timezone";
 import {useTheme} from "styled-components/native"
 
