@@ -9,7 +9,6 @@ import MultipleDayBar from './MultipleDayBar';
 import ProgressBar from './ProgressBar';
 import SingleDayBar from './SingleDayBar';
 import moment from "moment-timezone";
-import {useTheme} from "styled-components/native"
 
 interface TimelineHeaderProps {
   renderDayBarItem?: (props: DayBarItemProps) => JSX.Element;
@@ -47,7 +46,6 @@ const TimelineHeader = ({
   const [startDate, setStartDate] = useState(pages[viewMode].data[pages[viewMode].index] || '');
   const weekBarIndex = useRef(pages.week.index);
   const dayBarIndex = useRef(pages.day.index);
-  const _theme = useTheme();
 
   const getDate = useCallback(() => {
     const numOfDays = viewMode === 'workWeek' ? COLUMNS.week : COLUMNS[viewMode];
