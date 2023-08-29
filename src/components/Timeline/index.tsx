@@ -1,34 +1,16 @@
 import moment from 'moment-timezone';
-import React, {
-  forwardRef,
-  useEffect,
-  useImperativeHandle,
-  useMemo,
-} from 'react';
-import {
-  GestureResponderEvent,
-  LayoutChangeEvent,
-  StyleSheet,
-  View,
-} from 'react-native';
-import {
-  Gesture,
-  GestureDetector,
-  GestureHandlerRootView,
-} from 'react-native-gesture-handler';
-import {
-  runOnJS,
-  useAnimatedReaction,
-  withTiming,
-} from 'react-native-reanimated';
-import { timeZoneData } from '../../assets/timeZone';
-import { COLUMNS, DEFAULT_PROPS } from '../../constants';
-import { useTimelineCalendarContext } from '../../context/TimelineProvider';
+import React, {forwardRef, useEffect, useImperativeHandle, useMemo,} from 'react';
+import {GestureResponderEvent, LayoutChangeEvent, StyleSheet, View,} from 'react-native';
+import {Gesture, GestureDetector, GestureHandlerRootView,} from 'react-native-gesture-handler';
+import {runOnJS, useAnimatedReaction, withTiming,} from 'react-native-reanimated';
+import {timeZoneData} from '../../assets/timeZone';
+import {COLUMNS, DEFAULT_PROPS} from '../../constants';
+import {useTimelineCalendarContext} from '../../context/TimelineProvider';
 import useDragCreateGesture from '../../hooks/useDragCreateGesture';
 import useZoomGesture from '../../hooks/usePinchGesture';
 import useTimelineScroll from '../../hooks/useTimelineScroll';
-import type { TimelineCalendarHandle, TimelineProps } from '../../types';
-import { clampValues, groupEventsByDate } from '../../utils';
+import type {TimelineCalendarHandle, TimelineProps} from '../../types';
+import {clampValues, groupEventsByDate} from '../../utils';
 import DragCreateItem from './DragCreateItem';
 import TimelineHeader from './TimelineHeader';
 import TimelineSlots from './TimelineSlots';

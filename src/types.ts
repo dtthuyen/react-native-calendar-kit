@@ -388,6 +388,7 @@ export interface ThemeProperties {
   minimumEventHeight?: number;
 
   allowFontScaling?: boolean;
+  monthStyle?: TextStyle;
 }
 
 export interface RangeTime {

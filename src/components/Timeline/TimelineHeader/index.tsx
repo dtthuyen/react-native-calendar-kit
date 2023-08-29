@@ -61,8 +61,8 @@ const TimelineHeader = ({
             onPress={() => onPickDay && onPickDay()}
             activeOpacity={0.8}
             style={{width: hourWidth, justifyContent: 'center', alignItems: 'center'}}>
-          <Text style={styles.dayName}>{getDate()[1]}</Text>
-          <Text style={styles.dayNumber}>{getDate()[0]}</Text>
+          <Text style={{...styles.month, ...(theme?.monthStyle || {})}}>{getDate()[1]}</Text>
+          <Text style={{...styles.year, ...(theme?.monthStyle || {})}}>{getDate()[0]}</Text>
         </TouchableOpacity>
     )
   };
@@ -246,17 +246,17 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 22
   },
-  dayName: {
+  month: {
     color: DEFAULT_PROPS.PRIMARY_COLOR,
     fontSize: 13,
     lineHeight: 15,
-    letterSpacing: 0.5
+    letterSpacing: 0.5,
   },
-  dayNumber: {
+  year: {
     color: DEFAULT_PROPS.PRIMARY_COLOR,
     fontSize: 13,
     lineHeight: 25,
-    marginTop: 2
+    marginTop: 2,
   },
   container: {
     shadowColor: '#000',
