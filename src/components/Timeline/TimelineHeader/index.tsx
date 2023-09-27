@@ -9,6 +9,7 @@ import MultipleDayBar from './MultipleDayBar';
 import ProgressBar from './ProgressBar';
 import SingleDayBar from './SingleDayBar';
 import moment from "moment-timezone";
+import {useTheme} from "styled-components/native";
 
 interface TimelineHeaderProps {
   renderDayBarItem?: (props: DayBarItemProps) => JSX.Element;
@@ -20,13 +21,13 @@ interface TimelineHeaderProps {
 }
 
 const TimelineHeader = ({
-  renderDayBarItem,
-  onPressDayNum,
-  isLoading,
-  highlightDates,
-  selectedEventId,
-  onPickDay
-}: TimelineHeaderProps) => {
+                          renderDayBarItem,
+                          onPressDayNum,
+                          isLoading,
+                          highlightDates,
+                          selectedEventId,
+                          onPickDay
+                        }: TimelineHeaderProps) => {
   const {
     syncedLists,
     viewMode,
@@ -41,11 +42,12 @@ const TimelineHeader = ({
     locale,
     tzOffset,
     currentDate,
-      firstDate
+    firstDate
   } = useTimelineCalendarContext();
   const [startDate, setStartDate] = useState(pages[viewMode].data[pages[viewMode].index] || '');
   const weekBarIndex = useRef(pages.week.index);
   const dayBarIndex = useRef(pages.day.index);
+  const _theme = useTheme();
 
   const getDate = useCallback(() => {
     const numOfDays = viewMode === 'workWeek' ? COLUMNS.week : COLUMNS[viewMode];
@@ -56,21 +58,21 @@ const TimelineHeader = ({
 
   const renderTextMonth = () => {
     return (
-        <TouchableOpacity
-            disabled={!onPickDay}
-            onPress={() => onPickDay && onPickDay()}
-            activeOpacity={0.8}
-            style={{width: hourWidth, justifyContent: 'center', alignItems: 'center'}}>
-          <Text style={{...styles.month, ...(theme?.monthStyle || {})}}>{getDate()[1]}</Text>
-          <Text style={{...styles.year, ...(theme?.monthStyle || {})}}>{getDate()[0]}</Text>
-        </TouchableOpacity>
+      <TouchableOpacity
+        disabled={!onPickDay}
+        onPress={() => onPickDay && onPickDay()}
+        activeOpacity={0.8}
+        style={{width: hourWidth, justifyContent: 'center', alignItems: 'center'}}>
+        <Text style={{...styles.month, ...(theme?.monthStyle || {})}}>{getDate()[1]}</Text>
+        <Text style={{...styles.year, ...(theme?.monthStyle || {})}}>{getDate()[0]}</Text>
+      </TouchableOpacity>
     )
   };
 
   const _renderSingleDayItem = ({
-    item,
-    extraData,
-  }: ListRenderItemInfo<string>) => {
+                                  item,
+                                  extraData,
+                                }: ListRenderItemInfo<string>) => {
     const dayItemProps = {
       width: timelineWidth,
       startDate: item,
@@ -93,9 +95,9 @@ const TimelineHeader = ({
   };
 
   const _renderMultipleDayItem = ({
-    item,
-    extraData,
-  }: ListRenderItemInfo<string>) => {
+                                    item,
+                                    extraData,
+                                  }: ListRenderItemInfo<string>) => {
     const dayItemProps = {
       width: rightSideWidth,
       startDate: item,
@@ -230,7 +232,7 @@ const TimelineHeader = ({
 
   return (
     <View
-      style={[styles.container, { backgroundColor: theme.backgroundColor }]}
+      style={[styles.container, { backgroundColor: theme.backgroundColor, shadowColor: _theme?.grey1 || '#000'}]}
     >
       {syncedLists ? _renderDayBarList() : _renderDayBarView()}
       {selectedEventId && <View style={styles.disabledFrame} />}
@@ -259,7 +261,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   container: {
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 1,
