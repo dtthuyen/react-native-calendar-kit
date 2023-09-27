@@ -79,7 +79,6 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     marginTop: 2,
     height: 28,
-    backgroundColor: DEFAULT_PROPS.WHITE_COLOR,
   },
   dayName: { color: DEFAULT_PROPS.SECONDARY_COLOR, fontSize: 12 },
   dayNumber: { color: DEFAULT_PROPS.SECONDARY_COLOR, fontSize: 16 },
