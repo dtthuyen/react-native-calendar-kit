@@ -1,6 +1,6 @@
 {
   "name": "@howljs/calendar-kit",
-  "version": "1.13.3",
+  "version": "1.13.2",
   "description": "React Native Calendar Kit",
   "main": "src/index",
   "module": "src/index",
@@ -62,6 +62,7 @@
     "@types/lodash": "^4.14.186",
     "@types/react": "~17.0.21",
     "@types/react-native": "0.68.0",
+    "@types/styled-components": "5.1.1",
     "commitlint": "^17.0.2",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.5.0",
@@ -163,6 +164,7 @@
   },
   "dependencies": {
     "moment-timezone": "^0.5.40",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "styled-components": "5.3.6"
   }
 }
