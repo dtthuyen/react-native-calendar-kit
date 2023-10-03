@@ -1,10 +1,10 @@
 {
   "name": "@howljs/calendar-kit",
-  "version": "1.13.3",
+  "version": "1.13.4",
   "description": "React Native Calendar Kit",
   "main": "src/index",
   "module": "src/index",
-  "types": "lib/typescript/index.d.ts",
+  "types": "src/types.ts",
   "react-native": "src/index",
   "source": "src/index",
   "files": [
@@ -26,15 +26,6 @@
     "!**/__mocks__",
     "!**/.*"
   ],
-  "scripts": {
-    "test": "jest",
-    "typescript": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "bob build",
-    "release": "release-it",
-    "example": "yarn --cwd example",
-    "bootstrap": "yarn example && yarn install && yarn example pods"
-  },
   "keywords": [
     "react-native",
     "ios",

@@ -7,17 +7,17 @@ import type {DayBarItemProps} from '../../../types';
 import {getDayBarStyle} from '../../../utils';
 
 const MultipleDayBar = ({
-  width,
-  columnWidth,
-  viewMode,
-  startDate,
-  onPressDayNum,
-  theme,
-  locale,
-  highlightDates,
-  currentDate,
-  tzOffset
-}: DayBarItemProps) => {
+                          width,
+                          columnWidth,
+                          viewMode,
+                          startDate,
+                          onPressDayNum,
+                          theme,
+                          locale,
+                          highlightDates,
+                          currentDate,
+                          tzOffset
+                        }: DayBarItemProps) => {
   const _renderDay = (dayIndex: number) => {
     const dateByIndex = moment.tz(startDate, tzOffset).add(dayIndex, 'd');
     const dateStr = dateByIndex.format('YYYY-MM-DD');
@@ -63,14 +63,14 @@ const MultipleDayBar = ({
   };
 
   return (
-      <View
-          style={[
-            styles.container,
-            { width, height: DEFAULT_PROPS.DAY_BAR_HEIGHT},
-          ]}
-      >
-        {times(COLUMNS[viewMode]+1).map(_renderDay)}
-      </View>
+    <View
+      style={[
+        styles.container,
+        { width, height: DEFAULT_PROPS.DAY_BAR_HEIGHT},
+      ]}
+    >
+      {times(COLUMNS[viewMode]+1).map(_renderDay)}
+    </View>
   );
 };
 
