@@ -203,7 +203,7 @@ const packOverlappingEventGroup = (
 
   columns.forEach((column, columnIndex) => {
     column.forEach((event) => {
-      const totalWidth = columnWidth - rightEdgeSpacing;
+      const totalWidth = columnWidth - rightEdgeSpacing - 6;
       const columnSpan = calcColumnSpan(event, columnIndex, columns);
       const eventLeft = (columnIndex / columns.length) * totalWidth;
 

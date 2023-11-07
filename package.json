@@ -1,6 +1,6 @@
 {
   "name": "@howljs/calendar-kit",
-  "version": "1.13.6",
+  "version": "1.13.7",
   "description": "React Native Calendar Kit",
   "main": "src/index",
   "module": "src/index",
