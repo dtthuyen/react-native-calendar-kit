@@ -15,6 +15,7 @@ const TimelineHours = () => {
     useTimelineCalendarContext();
 
   const _renderHour = (hour: HourItem, index: number) => {
+    if(index == 0) return null;
     return (
       <HourItem
         key={index}
