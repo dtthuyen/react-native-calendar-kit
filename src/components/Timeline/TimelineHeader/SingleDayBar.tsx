@@ -1,11 +1,10 @@
 import moment from 'moment-timezone';
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {DEFAULT_PROPS} from '../../../constants';
 import type {DayBarItemProps} from '../../../types';
 import {getDayBarStyle} from '../../../utils';
 
-const SIZE_ARROW = 14;
 const SingleDayBar = ({
                           width,
                           startDate,

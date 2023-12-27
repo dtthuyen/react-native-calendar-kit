@@ -1,31 +1,12 @@
 {
   "name": "@howljs/calendar-kit",
-  "version": "1.13.9",
+  "version": "1.14.0",
   "description": "React Native Calendar Kit",
   "main": "src/index",
   "module": "src/index",
   "types": "src/types.ts",
   "react-native": "src/index",
   "source": "src/index",
-  "files": [
-    "src",
-    "lib",
-    "android",
-    "ios",
-    "cpp",
-    "*.podspec",
-    "!lib/typescript/example",
-    "!ios/build",
-    "!android/build",
-    "!android/gradle",
-    "!android/gradlew",
-    "!android/gradlew.bat",
-    "!android/local.properties",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
-    "!**/.*"
-  ],
   "keywords": [
     "react-native",
     "ios",
@@ -33,13 +14,8 @@
     "calendar-kit",
     "calendar-week-view"
   ],
-  "repository": "https://github.com/howljs/react-native-calendar-kit",
-  "author": "howljs <lehau.dev@gmail.com> (https://github.com/howljs)",
+  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/howljs/react-native-calendar-kit/issues"
-  },
-  "homepage": "https://github.com/howljs/react-native-calendar-kit#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

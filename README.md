@@ -80,10 +80,3 @@ import { TimelineCalendar } from '@howljs/calendar-kit';
 ```
 
 ![View mode](./assets/mode.jpg)
-
-[npm-shield]: https://img.shields.io/npm/v/@howljs/calendar-kit
-[ko-fi-shield]: https://img.shields.io/static/v1.svg?label=%20&message=ko-fi&logo=ko-fi&color=13C3FF
-[paypal-me-shield]: https://img.shields.io/static/v1.svg?label=%20&message=PayPal.Me&logo=paypal
-[paypal-me]: https://www.paypal.me/j2teamlh
-[ko-fi-profile]: https://ko-fi.com/W7W6G75FH
-[npm-link]: https://www.npmjs.com/package/@howljs/calendar-kit

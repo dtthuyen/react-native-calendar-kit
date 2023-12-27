@@ -129,8 +129,8 @@ const TimelineHeader = ({
   };
 
   const extraValues = useMemo(
-    () => ({ locale, highlightDates, theme, currentDate, columnWidth }),
-    [locale, highlightDates, theme, currentDate, columnWidth]
+    () => ({ locale, highlightDates, theme, currentDate, columnWidth, renderHeaderDay }),
+    [locale, highlightDates, theme, currentDate, columnWidth, renderHeaderDay]
   );
 
   const _renderDayBarList = () => {
