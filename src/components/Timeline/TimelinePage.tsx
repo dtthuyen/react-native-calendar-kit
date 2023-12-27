@@ -142,7 +142,7 @@ const TimelinePage = ({
   const _renderEvent = (event: PackedEvent, dayIndex: number) => {
     return (
       <EventBlock
-        key={event.id}
+        key={event.id+dayIndex}
         event={event}
         dayIndex={dayIndex}
         columnWidth={columnWidth}

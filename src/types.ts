@@ -113,6 +113,10 @@ export interface TimelineProps {
 
   /** pick a day and go to date */
   onPickDay?: () => void;
+
+  renderHeaderDay?: any;
+  renderLeftHeaderDay?: any;
+  renderRightHeaderDay?: any;
 }
 
 export interface UnavailableItemProps {
@@ -346,6 +350,9 @@ export interface DayBarItemProps {
   highlightDates?: HighlightDates;
   tzOffset: string;
   currentDate: string;
+  renderHeaderDay?: any;
+  renderLeftHeaderDay?: any;
+  renderRightHeaderDay?: any;
 }
 
 export interface ThemeProperties {

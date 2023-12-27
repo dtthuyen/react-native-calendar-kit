@@ -36,6 +36,9 @@ const Timeline: React.ForwardRefRenderFunction<
     onChange,
     onTimeIntervalHeightChange,
     onPickDay,
+    renderHeaderDay,
+    renderLeftHeaderDay,
+    renderRightHeaderDay,
     ...other
   },
   ref
@@ -281,6 +284,9 @@ const Timeline: React.ForwardRefRenderFunction<
           highlightDates={highlightDates}
           selectedEventId={selectedEvent?.id}
           onPickDay={onPickDay}
+          renderHeaderDay={renderHeaderDay}
+          renderLeftHeaderDay={renderLeftHeaderDay}
+          renderRightHeaderDay={renderRightHeaderDay}
         />
       )}
       <View style={styles.content} onLayout={_onContentLayout}>

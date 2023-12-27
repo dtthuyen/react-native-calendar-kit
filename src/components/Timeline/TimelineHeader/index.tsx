@@ -18,6 +18,9 @@ interface TimelineHeaderProps {
   highlightDates?: HighlightDates;
   selectedEventId?: string;
   onPickDay?: () => void;
+  renderHeaderDay?: any
+  renderLeftHeaderDay?: any
+  renderRightHeaderDay?: any
 }
 
 const TimelineHeader = ({
@@ -26,7 +29,10 @@ const TimelineHeader = ({
                           isLoading,
                           highlightDates,
                           selectedEventId,
-                          onPickDay
+                          onPickDay,
+                          renderHeaderDay,
+                          renderLeftHeaderDay,
+                          renderRightHeaderDay
                         }: TimelineHeaderProps) => {
   const {
     syncedLists,
@@ -85,13 +91,16 @@ const TimelineHeader = ({
       highlightDates: extraData.highlightDates,
       tzOffset,
       currentDate: extraData.currentDate,
+      renderHeaderDay,
+      renderLeftHeaderDay,
+      renderRightHeaderDay
     };
 
     if (renderDayBarItem) {
       return renderDayBarItem(dayItemProps);
     }
 
-    return <SingleDayBar {...dayItemProps} />;
+    return <SingleDayBar {...dayItemProps}/>;
   };
 
   const _renderMultipleDayItem = ({

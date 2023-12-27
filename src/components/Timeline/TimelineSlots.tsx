@@ -139,9 +139,10 @@ const TimelineSlots = ({
     ]
   );
 
-  const _renderPage = ({ item, extraData }: ListRenderItemInfo<string>) => {
+  const _renderPage = ({ item, extraData, index }: ListRenderItemInfo<string>) => {
     return (
       <TimelinePage
+          key={index}
         startDate={item}
         isLoading={extraData?.isLoading}
         holidays={extraData?.holidays}
