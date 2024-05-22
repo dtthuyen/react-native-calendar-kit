@@ -3,10 +3,8 @@
 React Native Calendar component, fully implemented using @shopify/flash-list, react-native-gesture-handler and react-native-reanimated. Support pinch to zoom, drag and drop to create/update event.
 
 [![Version][npm-shield]][npm-link]
-[![PayPal_Me][paypal-me-shield]][paypal-me]
-[![ko-fi][ko-fi-shield]][ko-fi-profile]
 
-[![Demo](./assets/demo.gif)](https://user-images.githubusercontent.com/33460888/199891737-af6957ba-6a2c-49ee-8312-6feca89a2c39.MP4)
+[![Demo]](https://drive.google.com/file/d/1yZtyLAh7edgsnDM2DsbEzQgeJe-1wJeq/view?usp=sharing)
 
 ## Installation
 
@@ -79,4 +77,4 @@ import { TimelineCalendar } from '@howljs/calendar-kit';
 <TimelineCalendar viewMode="workWeek" />;
 ```
 
-![View mode](./assets/mode.jpg)
+![View mode](https://drive.google.com/file/d/1UZesHZ_l40nUSkuD97673W47nomJxEYq/view?usp=drive_link)
